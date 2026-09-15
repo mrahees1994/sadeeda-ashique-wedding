@@ -10,10 +10,121 @@
   <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
-  <p style="font-family:Cormorant Garamond,serif;text-align:center;padding:40px;color:#ead392;background:#0c1f18;min-height:100vh">
-    Loading invitation files… If you still see this after uploading the site, refresh in a minute.
-  </p>
+<body class="is-locked">
+  <section class="intro" id="intro" role="dialog" aria-label="Open the wedding invitation" tabindex="0">
+    <div class="intro-inner">
+      <p class="intro-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+      <p class="intro-kicker">A Wedding Invitation</p>
+      <h1 class="intro-names gold-text">SADEEDA & ASHIQUE</h1>
+      <button class="intro-seal" type="button" aria-label="Tap the seal to open the invitation">
+        <img src="" alt="Wax seal monogram S and A" />
+      </button>
+      <p class="intro-tap">Tap the seal to open</p>
+    </div>
+  </section>
+  <main class="app" id="app">
+    <div class="canvas">
+      <section class="sheet-frame reveal" id="home" data-section>
+        <article class="sheet sheet--hero">
+          <p class="ayah gold-text">وَخَلَقْنَاكُمْ أَزْوَاجًا</p>
+          <p class="ayah-en">“And We created you in pairs.”<span class="ayah-ref">(Surah An-Naba 78:8)</span></p>
+          <p class="kicker">With the blessings of Almighty Allah</p>
+          <h2 class="names"><span class="nm gold-text">SADEEDA</span><span class="amp">&</span><span class="nm gold-text">ASHIQUE</span></h2>
+          <p class="honour">request the honour of your presence<br />to celebrate the wedding ceremony</p>
+        </article>
+      </section>
+      <section class="sheet-frame reveal" id="our-day" data-section>
+        <article class="sheet">
+          <p class="kicker">Our Day</p>
+          <div class="date-block">
+            <div><div class="label">Thursday</div><div class="big gold-text">24</div></div>
+            <div class="date-rule"></div>
+            <div><div class="label">September</div><div class="big gold-text">2026</div></div>
+          </div>
+          <p class="time-line">11:00 AM – 3:00 PM</p>
+          <h3 class="venue-name gold-text">CRYSTAL PLAZA</h3>
+          <p class="venue-sub">Melangadi, Kalpakanchery</p>
+          <div class="btn-wrap"><a class="btn-gold" href="https://maps.app.goo.gl/gGjJxkZ8PEbg22Ct5g?g_st=ic" data-maps>View Location</a></div>
+        </article>
+      </section>
+      <section class="sheet-frame reveal">
+        <article class="sheet">
+          <p class="kicker">Until we gather</p>
+          <div class="count-done" id="cdDone"><p class="who-name gold-text">ALHAMDULILLAH</p></div>
+          <div class="count-grid">
+            <div class="count-cell"><div class="num gold-text" id="cdDays">00</div><div class="lbl">Days</div></div>
+            <div class="count-cell"><div class="num gold-text" id="cdHours">00</div><div class="lbl">Hours</div></div>
+            <div class="count-cell"><div class="num gold-text" id="cdMins">00</div><div class="lbl">Minutes</div></div>
+            <div class="count-cell"><div class="num gold-text" id="cdSecs">00</div><div class="lbl">Seconds</div></div>
+          </div>
+        </article>
+      </section>
+      <section class="sheet-frame reveal">
+        <article class="sheet">
+          <p class="msg">With the blessings of Almighty Allah, we invite you to join us as we celebrate this beautiful beginning.</p>
+          <p class="msg-soft">Your presence and blessings will make this blessed occasion even more special.</p>
+        </article>
+      </section>
+      <section class="sheet-frame reveal" id="family" data-section>
+        <article class="sheet">
+          <p class="who-label gold-text">The Bride</p>
+          <h3 class="who-name gold-text">SADEEDA</h3>
+          <p class="who-meta"><span>D/O SIDHEEK</span><span>VAKKAYIL HOUSE</span><span>KALLINGAL</span></p>
+        </article>
+      </section>
+      <section class="sheet-frame reveal">
+        <article class="sheet">
+          <p class="who-label">The Groom</p>
+          <h3 class="who-name gold-text">ASHIQUE</h3>
+          <p class="who-meta"><span>S/O EBRAHIM</span><span>ARIMBANTHODI</span><span>VAYASAN PADI</span><span>KURUKA, EDARIKODE</span></p>
+        </article>
+      </section>
+      <section class="sheet-frame reveal" id="gallery" data-section>
+        <article class="sheet">
+          <p class="kicker">Gallery</p>
+          <div class="gallery">
+            <figure><button class="g-frame" data-full="" type="button"><img alt="Sadeeda and Ashique" /></button></figure>
+            <figure><button class="g-frame" data-full="" type="button"><img alt="Couple illustration" /></button></figure>
+            <figure><button class="g-frame" data-full="" type="button"><img alt="Roses and jewellery" /></button></figure>
+          </div>
+        </article>
+      </section>
+      <section class="sheet-frame reveal" id="venue" data-section>
+        <article class="sheet">
+          <p class="kicker">The Venue</p>
+          <h3 class="venue-name gold-text">CRYSTAL PLAZA</h3>
+          <p class="venue-sub">Melangadi</p>
+          <p class="venue-sub">Kalpakanchery</p>
+          <div class="btn-wrap"><a class="btn-gold" href="https://maps.app.goo.gl/gGjJxkZ8PEbg22Ct5g?g_st=ic" data-maps>Get Directions</a></div>
+        </article>
+      </section>
+      <section class="sheet-frame reveal" id="rsvp" data-section>
+        <article class="sheet">
+          <p class="kicker">Your Presence Matters</p>
+          <p class="msg-soft">Your presence and blessings will make this blessed occasion even more special.</p>
+          <div class="btn-wrap"><button class="btn-gold" type="button" data-rsvp>RSVP</button></div>
+        </article>
+      </section>
+      <section class="sheet-frame reveal">
+        <article class="sheet" style="text-align:center">
+          <div class="close-seal"><img alt="S and A wax seal" /></div>
+          <p class="script gold-text">Insha Allah</p>
+          <p class="msg-soft" style="margin-top:10px">Looking forward to celebrating this blessed occasion with you.</p>
+        </article>
+      </section>
+    </div>
+  </main>
+  <nav class="dock" id="dock">
+    <a href="#home">Home</a><a href="#our-day">Our Day</a><a href="#venue">Venue</a><a href="#family">Family</a><a href="#gallery">Gallery</a><a href="#rsvp">RSVP</a>
+  </nav>
+  <button class="music-btn" id="musicBtn" type="button" aria-label="Play music">♪</button>
+  <div class="lightbox" id="lightbox"><button class="lightbox-x" type="button">×</button><img id="lightboxImg" alt="" /></div>
+  <script src="js/asset-velvet.js"></script>
+  <script src="js/asset-paper.js"></script>
+  <script src="js/asset-seal.js"></script>
+  <script src="js/asset-g1.js"></script>
+  <script src="js/asset-g2.js"></script>
+  <script src="js/asset-g3.js"></script>
   <script src="js/config.js"></script>
   <script src="js/app.js"></script>
 </body>
