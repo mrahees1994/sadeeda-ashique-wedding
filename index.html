@@ -17,12 +17,7 @@
       <p class="intro-kicker">A Wedding Invitation</p>
       <h1 class="intro-names gold-text">SADEEDA & ASHIQUE</h1>
       <button class="intro-seal" type="button" aria-label="Tap the seal to open the invitation">
-        <img id="sealImg" alt="Wax seal monogram S and A" />
-        <svg class="seal-svg seal-fallback" viewBox="0 0 200 200" aria-hidden="true">
-          <circle cx="100" cy="100" r="92" fill="#5a1218"/>
-          <circle cx="100" cy="100" r="78" fill="none" stroke="#c6a15a" stroke-width="3"/>
-          <text x="100" y="110" text-anchor="middle" font-family="Times New Roman, serif" font-size="36" fill="#ead392">S & A</text>
-        </svg>
+        <img src="assets/images/wax-seal.png" alt="Wax seal monogram S and A" />
       </button>
       <p class="intro-tap">Tap the seal to open</p>
     </div>
@@ -88,9 +83,9 @@
         <article class="sheet">
           <p class="kicker">Gallery</p>
           <div class="gallery">
-            <figure><button class="g-frame" data-full="" type="button"><img alt="Sadeeda and Ashique on emerald velvet" /></button></figure>
-            <figure><button class="g-frame" data-full="" type="button"><img alt="Line drawing of the couple" /></button></figure>
-            <figure><button class="g-frame" data-full="" type="button"><img alt="Ivory roses and gold jewellery" /></button></figure>
+            <figure><button class="g-frame" data-full="assets/images/gallery-01.jpg" type="button"><img src="assets/images/gallery-01.jpg" alt="Sadeeda and Ashique on emerald velvet" /></button></figure>
+            <figure><button class="g-frame" data-full="assets/images/gallery-02.jpg" type="button"><img src="assets/images/gallery-02.jpg" alt="Line drawing of the couple" /></button></figure>
+            <figure><button class="g-frame" data-full="assets/images/gallery-03.jpg" type="button"><img src="assets/images/gallery-03.jpg" alt="Ivory roses and gold jewellery" /></button></figure>
           </div>
         </article>
       </section>
@@ -112,7 +107,7 @@
       </section>
       <section class="sheet-frame reveal">
         <article class="sheet" style="text-align:center">
-          <div class="close-seal"><img id="sealImg2" alt="S and A wax seal" /></div>
+          <div class="close-seal"><img src="assets/images/wax-seal.png" alt="S and A wax seal" /></div>
           <p class="script gold-text">Insha Allah</p>
           <p class="msg-soft" style="margin-top:10px">Looking forward to celebrating this blessed occasion with you.</p>
         </article>
@@ -122,12 +117,7 @@
   <nav class="dock" id="dock">
     <a href="#home">Home</a><a href="#our-day">Our Day</a><a href="#venue">Venue</a><a href="#family">Family</a><a href="#gallery">Gallery</a><a href="#rsvp">RSVP</a>
   </nav>
-  <script src="js/asset-velvet.js"></script>
-  <script src="js/asset-paper.js"></script>
-  <script src="js/asset-seal.js"></script>
-  <script src="js/asset-g1.js"></script>
-  <script src="js/asset-g2.js"></script>
-  <script src="js/asset-g3.js"></script>
+  <audio id="bgm" src="assets/audio/leberch-wedding.mp3" loop preload="none"></audio>
   <script src="js/config.js"></script>
   <script src="js/app.js"></script>
 </body>
