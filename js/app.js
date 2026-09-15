@@ -1,20 +1,5 @@
 /* SADEEDA & ASHIQUE */
 (function () {
-  const A = window.INV_ASSETS || {};
-  document.querySelectorAll('.intro-seal img, .close-seal img').forEach(function (img) {
-    if (A.seal) img.src = A.seal;
-  });
-  document.querySelectorAll('[data-full]').forEach(function (btn, i) {
-    var key = ['g1', 'g2', 'g3'][i];
-    if (A[key]) {
-      var im = btn.querySelector('img');
-      if (im) im.src = A[key];
-      btn.setAttribute('data-full', A[key]);
-    }
-  });
-  if (A.velvet) document.documentElement.style.setProperty('--velvet-img', 'url("' + A.velvet + '")');
-  if (A.paper) document.documentElement.style.setProperty('--paper-img', 'url("' + A.paper + '")');
-
   const W = window.WEDDING || {};
   const $ = (s, r) => (r || document).querySelector(s);
   const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
@@ -22,7 +7,6 @@
   const app = $('#app');
   const audio = $('#bgm');
   const musicBtn = $('#musicBtn');
-  const dock = $('#dock');
   const lightbox = $('#lightbox');
   const lightImg = $('#lightboxImg');
 
@@ -71,7 +55,7 @@
   $$('[data-maps]').forEach(function (el) {
     el.addEventListener('click', function (e) {
       e.preventDefault();
-      window.open((W.venue && W.venue.mapsUrl) || el.href, '_blank', 'noopener');
+      window.open((W.venue && W.venue.mapsUrl) || el.getAttribute('href'), '_blank', 'noopener');
     });
   });
   $$('[data-rsvp]').forEach(function (el) {
@@ -82,6 +66,28 @@
       window.open('https://wa.me/' + num + '?text=' + msg, '_blank', 'noopener');
     });
   });
+  $$('[data-cal]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var ics = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//Sadeeda Ashique Wedding//EN',
+        'BEGIN:VEVENT',
+        'DTSTART;TZID=Asia/Kolkata:20260924T110000',
+        'DTEND;TZID=Asia/Kolkata:20260924T150000',
+        'SUMMARY:Sadeeda & Ashique Wedding',
+        'LOCATION:Crystal Plaza, Melangadi, Kalpakanchery',
+        'DESCRIPTION:Wedding ceremony of Sadeeda and Ashique',
+        'END:VEVENT',
+        'END:VCALENDAR'
+      ].join('\r\n');
+      var blob = new Blob([ics], { type: 'text/calendar' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'sadeeda-ashique-wedding.ics';
+      a.click();
+    });
+  });
   $$('[data-full]').forEach(function (btn) {
     btn.addEventListener('click', function () {
       if (!lightbox || !lightImg) return;
@@ -90,5 +96,4 @@
     });
   });
   if (lightbox) lightbox.addEventListener('click', function () { lightbox.classList.remove('is-on'); });
-  $$('.reveal').forEach(function (el) { el.classList.add('is-in'); });
 })();
